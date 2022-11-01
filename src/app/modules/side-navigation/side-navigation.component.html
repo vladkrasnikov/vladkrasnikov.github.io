@@ -3,11 +3,12 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTabrFk3Iah-Ivw7J7s4Qemgi4xvrWx3n6A7A&usqp=CAU" height="70px" style="align-items: center">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="">Додому</a>
+      <a mat-list-item href="">Про сайт</a>
+<!--      <a mat-list-item href="#">Link 3</a>-->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,8 +21,9 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>angular-lab2-info-network</span>
-    </mat-toolbar>
+      <span>KV Service</span>
+      </mat-toolbar>
     <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
